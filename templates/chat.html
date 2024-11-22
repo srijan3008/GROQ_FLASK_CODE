@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask Chat App</title>
+</head>
+<body>
+    <h1>Flask Chat App</h1>
+    <form method="post">
+        <input type="text" name="message" placeholder="Enter your message here" required>
+        <input type="submit" value="Send">
+    </form>
+    <div>
+        {% for sender, message in chat_history %}
+            <p><strong>{{ sender }}:</strong> {{ message }}</p>
+        {% endfor %}
+    </div>
+</body>
+</html>
