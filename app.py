@@ -5,7 +5,7 @@ import os
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
-key = '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'
+key = ''
 client = Groq(api_key=key)
 
 @app.route('/', methods=['GET', 'POST'])
